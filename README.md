@@ -68,6 +68,11 @@ To add these rules to Cursor AI:
 - If something is unclear, ask for clarification before assuming
 - Never invent dependencies, classes, or methods that do not exist in the context
 
+### 8. Commit Messages
+
+- Commit title: first letter uppercase, the rest all lowercase, without a final period
+- Commit description: list changes in separate lines, each starting with "- " (dash + space)
+
 ---
 
 ## Español
@@ -135,3 +140,8 @@ Para agregar estas reglas a Cursor AI:
 - No incluir texto explicativo fuera del código a menos que se solicite
 - Si algo no está claro, pedir aclaración antes de asumir
 - Nunca inventar dependencias, clases o métodos que no existan en el contexto
+
+### 8. Mensajes de Commit
+
+- Título del commit: primera letra mayúscula, el resto en minúsculas, sin punto final
+- Descripción del commit: listar cambios en líneas separadas, cada una comenzando con "- " (guion + espacio)
