@@ -1,8 +1,6 @@
 # cursor-ai-my-rules
 
-Custom user rules for Cursor AI (Reglas personalizadas de usuario para Cursor AI)
-
-## English
+Custom user rules for Cursor AI
 
 ### How to Add These Rules
 
@@ -12,7 +10,9 @@ To add these rules to Cursor AI:
 2. Navigate to **Rules and Memories**
 3. Select **User Rules**
 4. Click **Add Rules**
-5. Copy and paste the rules from the Spanish section below
+5. Copy and paste the rules from the sections below
+
+## User Rules
 
 ### 1. Response Cleanliness
 
@@ -73,75 +73,26 @@ To add these rules to Cursor AI:
 - Commit title: first letter uppercase, the rest all lowercase, without a final period
 - Commit description: list changes in separate lines, each starting with "- " (dash + space)
 
----
+## Project Rules
 
-## Español
+To add project-specific rules for a particular language or framework:
 
-### Cómo Agregar Estas Reglas
+1. Create a rule file in your project root with the language/framework name (e.g., `default-flutter.md`, `default-typescript.md`)
+2. Use the `.md` format with frontmatter metadata:
+   ```markdown
+   ---
+   description:
+   globs:
+   alwaysApply: true
+   ---
+   ```
+3. Add your language or framework-specific rules in the file
+4. Convert the `.md` file to `.mdc` format before adding it to the editor
+5. In Cursor AI:
+   - Open **Settings**
+   - Navigate to **Rules and Memories**
+   - Select **Project Rules**
+   - Click **Add Rules from File**
+   - Select your `.mdc` rule file
 
-Para agregar estas reglas a Cursor AI:
-
-1. Abrir **Configuración**
-2. Navegar a **Reglas y Memorias**
-3. Seleccionar **Reglas de Usuario**
-4. Hacer clic en **Agregar Reglas**
-5. Copiar y pegar las reglas de la sección de abajo
-
-### 1. Limpieza de Respuestas
-
-- Devolver únicamente código limpio y completo
-- No incluir encabezados ni texto de relleno como "Aquí está tu código"
-
-### 2. Seguridad y Debugging
-
-- No exponer datos sensibles ni claves en el código
-- No usar `print` o `console.log` para depuración a menos que se solicite explícitamente
-
-### 3. Importaciones
-
-- Escribir todas las importaciones usando rutas absolutas basadas en el alias del proyecto
-- No usar rutas relativas como `"../"` o `"./"`
-- Usar la raíz del proyecto o alias configurado (ej. `"@app/"` o `"src/"`) para las importaciones
-
-### 4. Clean Code y Principios SOLID
-
-- Aplicar principios de Clean Code y SOLID cuando sea razonable
-- Dividir la lógica en funciones o clases cortas y reutilizables
-- Evitar duplicación de código (principio DRY)
-- Asegurar que el código sea sintácticamente correcto y funcional
-- Preferir soluciones nativas sin dependencias externas innecesarias
-- Evitar "números mágicos" y usar constantes descriptivas
-- Mantener consistencia entre nombres, tipos y responsabilidades
-
-### 5. Respeto al Alcance de la Solicitud
-
-- Respetar estrictamente el alcance de la solicitud
-- No excederse ni agregar características no solicitadas
-- Si la tarea parece incompleta, sugerir cómo completarla, pero no inventarla
-- Al editar código, cambiar únicamente lo mínimo necesario
-- Si una función ya existe, referirse a ella en lugar de reescribirla
-- Si hay ambigüedad, preguntar antes de proceder
-- Nunca mezclar lógica de negocio con presentación
-
-### 6. Legibilidad y Consistencia
-
-- Escribir código limpio, legible y consistente
-- Usar convenciones de estilo estándar según el lenguaje (camelCase, PascalCase, etc.)
-- Evitar comentarios innecesarios o extensos
-- Evitar repetir importaciones, declaraciones o estructuras existentes
-- Mantener consistencia en indentación y formato
-- No producir código que falle al compilar
-- Preferir claridad y simplicidad sobre complejidad
-
-### 7. Idioma y Estilo de Comunicación
-
-- Responder siempre en español
-- Ser directo, profesional y técnico
-- No incluir texto explicativo fuera del código a menos que se solicite
-- Si algo no está claro, pedir aclaración antes de asumir
-- Nunca inventar dependencias, clases o métodos que no existan en el contexto
-
-### 8. Mensajes de Commit
-
-- Título del commit: primera letra mayúscula, el resto en minúsculas, sin punto final
-- Descripción del commit: listar cambios en líneas separadas, cada una comenzando con "- " (guion + espacio)
+This allows you to have specific coding standards and patterns for different languages or frameworks within your project.
