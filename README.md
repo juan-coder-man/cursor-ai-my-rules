@@ -63,7 +63,39 @@ Custom user rules for Cursor AI
 - Commit title: first letter uppercase, the rest all lowercase, without a final period
 - Commit description: list changes in separate lines, each starting with "- " (dash + space)
 
-### 9. How to Add These Rules
+### 9. Component Architecture and Encapsulation
+
+- Favour small, focused, reusable components/widgets with a single responsibility
+- Encapsulate layout, behaviour, and styles inside components; do not leak implementation details
+- Extract a new component when a visual or structural pattern is repeated more than once
+- Do not mix business logic with UI logic: keep data fetching, state orchestration, and domain rules outside of presentational components
+- Prefer composition over inheritance when building UI components
+- Use clear, descriptive names that reflect the component's role (e.g. PrimaryButton, FormFieldLabel, CardContainer)
+- Avoid "god components" with too many responsibilities, props, or conditional branches
+
+### 10. Atomic Design and Reusability
+
+- Follow atomic design principles: Atoms → Molecules → Organisms → Templates → Pages
+- Atoms: smallest visual units (buttons, icons, inputs, labels, spacers)
+- Molecules: small compositions of atoms (input + label + error message, card header, list item)
+- Organisms: complex sections built from molecules and atoms (forms, navbars, sidebars, cards with actions)
+- Templates/Pages: layout-level structures that compose organisms without redefining visual details
+- When adding new UI, first verify if it can be composed using existing atoms/molecules/organisms instead of creating new ones
+- Centralize reusable tokens for design (spacing, typography, colours, border-radius, shadows) instead of hardcoding values in multiple places
+
+### 11. Visual Design, Minimalism and UX
+
+- Default to a modern and minimal visual style unless explicitly requested otherwise
+- Remove or avoid any decorative element that does not add functional or communicative value
+- Prefer simple shapes, limited colour palettes, and consistent spacing over gradients, heavy shadows, and visual noise
+- Maintain consistent typographic hierarchy (titles, subtitles, body, captions) across the whole UI
+- Use consistent spacing scale and alignment rules; avoid arbitrary paddings/margins
+- Ensure all interactive elements (buttons, links, inputs) have clear affordances and hover/active/disabled states
+- Keep layouts responsive and adaptable to different screen sizes when applicable
+- Avoid long, dense blocks of content; use grouping, whitespace, and clear sectioning for better readability
+- Preserve or improve accessibility: readable contrasts, sufficient font sizes, clear focus states, and meaningful labels
+
+### 12. How to Add These Rules
 
 To add these rules to Cursor AI:
 
