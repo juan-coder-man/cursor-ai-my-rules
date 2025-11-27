@@ -2,16 +2,6 @@
 
 Custom user rules for Cursor AI
 
-### How to Add These Rules
-
-To add these rules to Cursor AI:
-
-1. Open **Settings**
-2. Navigate to **Rules and Memories**
-3. Select **User Rules**
-4. Click **Add Rules**
-5. Copy and paste the rules from the sections below
-
 ## User Rules
 
 ### 1. Response Cleanliness
@@ -72,6 +62,16 @@ To add these rules to Cursor AI:
 
 - Commit title: first letter uppercase, the rest all lowercase, without a final period
 - Commit description: list changes in separate lines, each starting with "- " (dash + space)
+
+### 9. How to Add These Rules
+
+To add these rules to Cursor AI:
+
+1. Open **Settings**
+2. Navigate to **Rules and Memories**
+3. Select **User Rules**
+4. Click **Add Rules**
+5. Copy and paste the rules from the sections below
 
 ## Project Rules
 
